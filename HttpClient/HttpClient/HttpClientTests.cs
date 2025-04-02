@@ -9,7 +9,7 @@ public class HttpClientTests(ITestOutputHelper output)
     public async Task ShouldReturnMessage()
     {
         var client = new HttpClient();
-        
+        output.WriteLine("Hello World!");
         var message = await client.GetMessage(":employee:name:");
         
         Assert.Equal("Hello :employee:name:!", message);
